@@ -168,13 +168,37 @@
 
 <div class="status-bar"><span class="status-dot"></span>实时同步中</div>
 
-<!-- 题目数据 -->
-<script src="rounds.js"></script>
-
 <!-- Firebase -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  // =============================================
+  // 🎮 题目与答案 — 修改这里来更换题目
+  // =============================================
+  const ROUNDS = [
+    {
+      label: "第一轮",
+      emojis: ["🐟", "🌊", "🐠", "✈️", "🦅", "☁️", "🏔️", "🌤️"],
+      answer: "如鱼得水 · 一飞冲天"
+    },
+    {
+      label: "第二轮",
+      emojis: ["🌙", "🌑", "☀️", "🌕", "💪", "🏔️", "⛰️", "🙏"],
+      answer: "日新月异 · 移山填海"
+    },
+    {
+      label: "第三轮",
+      emojis: ["🌸", "🌷", "🍂", "❄️", "🤝", "💍", "❤️", "👰"],
+      answer: "花好月圆 · 白头偕老"
+    },
+    {
+      label: "第四轮",
+      emojis: ["🦁", "🐯", "🐉", "🦊", "🐚", "🦋", "🌈", "⭐"],
+      answer: "龙腾虎跃 · 化蝶成仙"
+    }
+  ];
+  // =============================================
 
   const firebaseConfig = {
     apiKey: "AIzaSyC9Zk7-UUL-209FgLQKwT4DtTFfJNxfruM",
