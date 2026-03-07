@@ -32,12 +32,7 @@
     padding: 20px;
   }
 
-  .corner-decor {
-    position: fixed;
-    font-size: 3rem;
-    opacity: 0.15;
-    pointer-events: none;
-  }
+  .corner-decor { position: fixed; font-size: 3rem; opacity: 0.15; pointer-events: none; }
   .corner-decor.tl { top: 10px; left: 10px; }
   .corner-decor.tr { top: 10px; right: 10px; transform: scaleX(-1); }
   .corner-decor.bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
@@ -51,10 +46,7 @@
     max-width: 480px;
     width: 100%;
     text-align: center;
-    box-shadow:
-      0 0 0 6px rgba(139,26,26,0.5),
-      0 20px 60px rgba(0,0,0,0.5),
-      inset 0 1px 0 rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 6px rgba(139,26,26,0.5), 0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.6);
     color: var(--dark);
     position: relative;
   }
@@ -68,32 +60,11 @@
     pointer-events: none;
   }
 
-  .header-icon {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    display: block;
-    animation: float 3s ease-in-out infinite;
-  }
+  .header-icon { font-size: 2.5rem; margin-bottom: 8px; display: block; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
-
-  .game-title {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 2rem;
-    color: var(--deep-red);
-    letter-spacing: 4px;
-    margin-bottom: 4px;
-  }
-
-  .subtitle {
-    font-size: 0.85rem;
-    color: #8b6a3a;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-  }
+  .game-title { font-family: 'Ma Shan Zheng', cursive; font-size: 2rem; color: var(--deep-red); letter-spacing: 4px; margin-bottom: 4px; }
+  .subtitle { font-size: 0.85rem; color: #8b6a3a; letter-spacing: 2px; margin-bottom: 30px; }
 
   .round-badge {
     display: inline-block;
@@ -109,12 +80,7 @@
     transition: all 0.5s ease;
   }
 
-  .emoji-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin: 24px 0;
-  }
+  .emoji-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 24px 0; }
 
   .emoji-cell {
     background: white;
@@ -124,178 +90,42 @@
     font-size: 2.2rem;
     line-height: 1;
     box-shadow: 0 4px 12px rgba(139,26,26,0.1), inset 0 1px 0 rgba(255,255,255,0.8);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     cursor: default;
-    position: relative;
   }
 
-  .emoji-cell:hover {
-    transform: scale(1.12) rotate(-2deg);
-  }
+  .emoji-cell:hover { transform: scale(1.12) rotate(-2deg); }
 
-  .emoji-cell.reveal {
-    animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  }
+  .emoji-cell.reveal { animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+  @keyframes popIn { 0% { transform: scale(0) rotate(-20deg); opacity: 0; } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
 
-  @keyframes popIn {
-    0% { transform: scale(0) rotate(-20deg); opacity: 0; }
-    100% { transform: scale(1) rotate(0deg); opacity: 1; }
-  }
+  .hint-text { font-size: 0.88rem; color: #7a5c2a; margin: 10px 0 0; font-style: italic; letter-spacing: 1px; }
+  .divider { width: 60px; height: 2px; background: linear-gradient(to right, transparent, var(--gold), transparent); margin: 22px auto; }
+  .instruction { font-size: 0.9rem; color: #6b4f2a; line-height: 1.8; letter-spacing: 1px; }
+  .instruction strong { color: var(--deep-red); font-size: 1rem; }
 
-  .hint-text {
-    font-size: 0.88rem;
-    color: #7a5c2a;
-    margin: 10px 0 0;
-    font-style: italic;
-    letter-spacing: 1px;
-  }
+  .waiting-emoji { font-size: 4rem; display: block; animation: pulse 2s ease-in-out infinite; margin-bottom: 16px; }
+  @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }
 
-  .divider {
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    margin: 22px auto;
-  }
+  .waiting-title { font-family: 'Ma Shan Zheng', cursive; font-size: 1.8rem; color: var(--deep-red); letter-spacing: 4px; margin-bottom: 10px; }
+  .waiting-sub { font-size: 0.9rem; color: #8b6a3a; letter-spacing: 2px; }
 
-  .instruction {
-    font-size: 0.9rem;
-    color: #6b4f2a;
-    line-height: 1.8;
-    letter-spacing: 1px;
-  }
-
-  .instruction strong {
-    color: var(--deep-red);
-    font-size: 1rem;
-  }
-
-  /* Waiting screen */
-  #waiting-screen {
-    text-align: center;
-  }
-
-  .waiting-emoji {
-    font-size: 4rem;
-    display: block;
-    animation: pulse 2s ease-in-out infinite;
-    margin-bottom: 16px;
-  }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.7; }
-  }
-
-  .waiting-title {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 1.8rem;
-    color: var(--deep-red);
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-  }
-
-  .waiting-sub {
-    font-size: 0.9rem;
-    color: #8b6a3a;
-    letter-spacing: 2px;
-  }
-
-  /* Answer reveal */
-  .answer-section {
-    display: none;
-    margin-top: 16px;
-    padding: 16px;
-    background: rgba(139,26,26,0.06);
-    border-radius: 12px;
-    border: 1px dashed var(--gold);
-  }
-
+  .answer-section { display: none; margin-top: 16px; padding: 16px; background: rgba(139,26,26,0.06); border-radius: 12px; border: 1px dashed var(--gold); }
   .answer-section.show { display: block; animation: fadeIn 0.5s ease; }
+  .answer-label { font-size: 0.8rem; color: #8b6a3a; letter-spacing: 2px; margin-bottom: 8px; }
+  .answer-text { font-family: 'Ma Shan Zheng', cursive; font-size: 1.6rem; color: var(--deep-red); letter-spacing: 6px; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-  .answer-label {
-    font-size: 0.8rem;
-    color: #8b6a3a;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
+  #finished-screen { display: none; text-align: center; }
+  .congrats-emoji { font-size: 3.5rem; display: block; margin-bottom: 12px; animation: spin 1s ease-out; }
+  @keyframes spin { from { transform: rotate(-180deg) scale(0); } to { transform: rotate(0) scale(1); } }
+  .congrats-title { font-family: 'Ma Shan Zheng', cursive; font-size: 2rem; color: var(--deep-red); letter-spacing: 4px; }
+  .fireworks { font-size: 2rem; animation: sparkle 1.5s ease-in-out infinite alternate; letter-spacing: 8px; display: block; margin: 12px 0; }
+  @keyframes sparkle { from { opacity: 0.6; transform: scale(0.95); } to { opacity: 1; transform: scale(1.05); } }
 
-  .answer-text {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 1.6rem;
-    color: var(--deep-red);
-    letter-spacing: 6px;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Finished screen */
-  #finished-screen {
-    display: none;
-    text-align: center;
-  }
-
-  .congrats-emoji {
-    font-size: 3.5rem;
-    display: block;
-    margin-bottom: 12px;
-    animation: spin 1s ease-out;
-  }
-
-  @keyframes spin {
-    from { transform: rotate(-180deg) scale(0); }
-    to { transform: rotate(0) scale(1); }
-  }
-
-  .congrats-title {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 2rem;
-    color: var(--deep-red);
-    letter-spacing: 4px;
-  }
-
-  .fireworks {
-    font-size: 2rem;
-    animation: sparkle 1.5s ease-in-out infinite alternate;
-    letter-spacing: 8px;
-    display: block;
-    margin: 12px 0;
-  }
-
-  @keyframes sparkle {
-    from { opacity: 0.6; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1.05); }
-  }
-
-  .status-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #4caf50;
-    margin-right: 6px;
-    animation: blink 2s ease-in-out infinite;
-    vertical-align: middle;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  .status-bar {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    background: rgba(0,0,0,0.5);
-    color: rgba(255,255,255,0.7);
-    font-size: 0.72rem;
-    padding: 6px 12px;
-    border-radius: 20px;
-    letter-spacing: 1px;
-  }
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4caf50; margin-right: 6px; animation: blink 2s ease-in-out infinite; vertical-align: middle; }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .status-bar { position: fixed; bottom: 16px; right: 16px; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.7); font-size: 0.72rem; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; }
 </style>
 </head>
 <body>
@@ -310,37 +140,24 @@
   <div class="game-title">猜成语游戏</div>
   <div class="subtitle">— 婚礼互动小游戏 —</div>
 
-  <!-- Waiting Screen -->
   <div id="waiting-screen">
     <span class="waiting-emoji">🎊</span>
     <div class="waiting-title">等待游戏开始</div>
     <div class="waiting-sub">请等候主持人开始第一轮…</div>
   </div>
 
-  <!-- Game Screen -->
   <div id="game-screen" style="display:none;">
     <div class="round-badge" id="round-label">第一轮</div>
-
-    <div class="emoji-grid" id="emoji-grid">
-      <!-- filled by JS -->
-    </div>
-
+    <div class="emoji-grid" id="emoji-grid"></div>
     <p class="hint-text">💡 8个emoji对应两个四字成语，先猜出来有奖！</p>
-
     <div class="divider"></div>
-
-    <div class="instruction">
-      <strong>🏆 规则</strong><br>
-      猜出两个成语后<br>举手告诉主持人答案
-    </div>
-
+    <div class="instruction"><strong>🏆 规则</strong><br>猜出两个成语后<br>举手告诉主持人答案</div>
     <div class="answer-section" id="answer-section">
       <div class="answer-label">✨ 答案揭晓</div>
       <div class="answer-text" id="answer-text"></div>
     </div>
   </div>
 
-  <!-- Finished Screen -->
   <div id="finished-screen">
     <span class="congrats-emoji">🥂</span>
     <div class="congrats-title">游戏结束！</div>
@@ -349,48 +166,25 @@
   </div>
 </div>
 
-<div class="status-bar">
-  <span class="status-dot"></span>实时同步中
-</div>
+<div class="status-bar"><span class="status-dot"></span>实时同步中</div>
+
+<!-- 题目数据 -->
+<script src="rounds.js"></script>
 
 <!-- Firebase -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-  // ⬇⬇⬇ 替换成你的 Firebase 配置 ⬇⬇⬇
   const firebaseConfig = {
-  apiKey: "AIzaSyBng-CfS_VXo1gBSUJcby3ZCnZjwTu8mtc",
-  authDomain: "wedding-emoji-game.firebaseapp.com",
-  projectId: "wedding-emoji-game",
-  storageBucket: "wedding-emoji-game.firebasestorage.app",
-  messagingSenderId: "1035601415042",
-  appId: "1:1035601415042:web:5ec4af80ca6cf3a588dd9b"
-};
-  // ⬆⬆⬆ 替换成你的 Firebase 配置 ⬆⬆⬆
-
-  const ROUNDS = [
-    {
-      label: "第一轮",
-      emojis: ["🐟", "🌊", "🐠", "✈️", "🦅", "☁️", "🏔️", "🌤️"],
-      answer: "如鱼得水 · 一飞冲天"
-    },
-    {
-      label: "第二轮",
-      emojis: ["🌙", "🌑", "☀️", "🌕", "💪", "🏔️", "⛰️", "🙏"],
-      answer: "日新月异 · 移山填海"
-    },
-    {
-      label: "第三轮",
-      emojis: ["🌸", "🌷", "🍂", "❄️", "🤝", "💍", "❤️", "👰"],
-      answer: "花好月圆 · 白头偕老"
-    },
-    {
-      label: "第四轮",
-      emojis: ["🦁", "🐯", "🐉", "🦊", "🐚", "🦋", "🌈", "⭐"],
-      answer: "龙腾虎跃 · 化蝶成仙"
-    }
-  ];
+    apiKey: "AIzaSyC9Zk7-UUL-209FgLQKwT4DtTFfJNxfruM",
+    authDomain: "wedding-emoji-game.firebaseapp.com",
+    databaseURL: "https://wedding-emoji-game-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "wedding-emoji-game",
+    storageBucket: "wedding-emoji-game.firebasestorage.app",
+    messagingSenderId: "1035601415042",
+    appId: "1:1035601415042:web:5ec4af80ca6cf3a588dd9b"
+  };
 
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
@@ -412,8 +206,8 @@
     const round = ROUNDS[roundIndex];
     document.getElementById('round-label').textContent = round.label;
 
-    const grid = document.getElementById('emoji-grid');
     if (roundIndex !== currentRound) {
+      const grid = document.getElementById('emoji-grid');
       grid.innerHTML = '';
       round.emojis.forEach((e, i) => {
         const cell = document.createElement('div');
@@ -426,13 +220,8 @@
     }
 
     const answerSection = document.getElementById('answer-section');
-    const answerText = document.getElementById('answer-text');
-    if (showAnswer) {
-      answerText.textContent = round.answer;
-      answerSection.classList.add('show');
-    } else {
-      answerSection.classList.remove('show');
-    }
+    document.getElementById('answer-text').textContent = round.answer;
+    answerSection.classList.toggle('show', showAnswer === true);
   }
 
   function showFinished() {
@@ -444,14 +233,9 @@
   onValue(gameRef, (snapshot) => {
     const state = snapshot.val();
     if (!state) { showWaiting(); return; }
-
-    if (state.finished) {
-      showFinished();
-    } else if (state.round >= 0 && state.round < ROUNDS.length) {
-      showRound(state.round, state.showAnswer || false);
-    } else {
-      showWaiting();
-    }
+    if (state.finished) { showFinished(); }
+    else if (state.round >= 0 && state.round < ROUNDS.length) { showRound(state.round, state.showAnswer || false); }
+    else { showWaiting(); }
   });
 </script>
 </body>
