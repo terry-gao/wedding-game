@@ -12,17 +12,13 @@
     --cream: #fdf6e3;
     --light-gold: #f0d080;
     --dark: #1a0a0a;
-    --green: #2d6a2d;
-    --blue: #1a3a6b;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     background: #1a0a0a;
-    background-image:
-      radial-gradient(ellipse at top, rgba(139,26,26,0.4) 0%, transparent 60%),
-      radial-gradient(ellipse at bottom, rgba(201,168,76,0.1) 0%, transparent 50%);
+    background-image: radial-gradient(ellipse at top, rgba(139,26,26,0.4) 0%, transparent 60%), radial-gradient(ellipse at bottom, rgba(201,168,76,0.1) 0%, transparent 50%);
     min-height: 100vh;
     font-family: 'Noto Serif SC', serif;
     color: var(--cream);
@@ -32,22 +28,8 @@
     align-items: center;
   }
 
-  .page-title {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 1.6rem;
-    color: var(--light-gold);
-    letter-spacing: 4px;
-    text-align: center;
-    margin-bottom: 4px;
-  }
-
-  .page-sub {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 28px;
-  }
+  .page-title { font-family: 'Ma Shan Zheng', cursive; font-size: 1.6rem; color: var(--light-gold); letter-spacing: 4px; text-align: center; margin-bottom: 4px; }
+  .page-sub { font-size: 0.8rem; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-align: center; margin-bottom: 28px; }
 
   .status-card {
     background: rgba(255,255,255,0.05);
@@ -62,26 +44,10 @@
     justify-content: space-between;
   }
 
-  .status-label {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 1px;
-  }
+  .status-label { font-size: 0.82rem; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
+  .status-value { font-family: 'Ma Shan Zheng', cursive; font-size: 1.2rem; color: var(--light-gold); letter-spacing: 2px; }
 
-  .status-value {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 1.2rem;
-    color: var(--light-gold);
-    letter-spacing: 2px;
-  }
-
-  .rounds-container {
-    width: 100%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+  .rounds-container { width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 16px; }
 
   .round-card {
     background: rgba(253,246,227,0.04);
@@ -89,251 +55,60 @@
     border-radius: 16px;
     padding: 20px;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
   }
 
-  .round-card.active {
-    background: rgba(139,26,26,0.2);
-    border-color: var(--gold);
-    box-shadow: 0 0 20px rgba(201,168,76,0.15);
-  }
+  .round-card.active { background: rgba(139,26,26,0.2); border-color: var(--gold); box-shadow: 0 0 20px rgba(201,168,76,0.15); }
+  .round-card.done { opacity: 0.5; }
 
-  .round-card.done {
-    opacity: 0.5;
-  }
+  .round-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .round-title { font-family: 'Ma Shan Zheng', cursive; font-size: 1.2rem; color: var(--light-gold); letter-spacing: 3px; }
 
-  .round-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
-  }
-
-  .round-title {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 1.2rem;
-    color: var(--light-gold);
-    letter-spacing: 3px;
-  }
-
-  .round-status-badge {
-    font-size: 0.72rem;
-    padding: 3px 10px;
-    border-radius: 20px;
-    letter-spacing: 1px;
-  }
-
+  .round-status-badge { font-size: 0.72rem; padding: 3px 10px; border-radius: 20px; letter-spacing: 1px; }
   .badge-waiting { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
   .badge-active { background: rgba(201,168,76,0.2); color: var(--light-gold); border: 1px solid var(--gold); }
   .badge-done { background: rgba(45,106,45,0.2); color: #6fcf6f; border: 1px solid #4a8a4a; }
 
-  .emoji-preview {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
+  .emoji-preview { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .emoji-chip { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 6px 10px; font-size: 1.4rem; border: 1px solid rgba(201,168,76,0.15); }
 
-  .emoji-chip {
-    background: rgba(255,255,255,0.08);
-    border-radius: 8px;
-    padding: 6px 10px;
-    font-size: 1.4rem;
-    border: 1px solid rgba(201,168,76,0.15);
-  }
+  .answer-preview { font-size: 0.85rem; color: rgba(255,255,255,0.4); letter-spacing: 1px; font-style: italic; }
+  .answer-preview span { color: rgba(201,168,76,0.7); }
 
-  .answer-preview {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 1px;
-    font-style: italic;
-  }
+  .btn-group { display: flex; gap: 10px; margin-top: 14px; }
 
-  .answer-preview span {
-    color: rgba(201,168,76,0.7);
-  }
+  .btn { flex: 1; padding: 12px 16px; border: none; border-radius: 10px; font-family: 'Noto Serif SC', serif; font-size: 0.9rem; letter-spacing: 2px; cursor: pointer; transition: all 0.2s ease; font-weight: 700; }
+  .btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
-  .btn-group {
-    display: flex;
-    gap: 10px;
-    margin-top: 14px;
-  }
+  .btn-start { background: linear-gradient(135deg, var(--deep-red), #b02020); color: var(--light-gold); border: 1px solid var(--gold); }
+  .btn-start:hover:not(:disabled) { background: linear-gradient(135deg, #a02020, #d03030); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(139,26,26,0.5); }
 
-  .btn {
-    flex: 1;
-    padding: 12px 16px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: 700;
-  }
+  .btn-answer { background: linear-gradient(135deg, #2d4a6b, #1a3a5a); color: #90b8e8; border: 1px solid #4a7ab0; }
+  .btn-answer:hover:not(:disabled) { background: linear-gradient(135deg, #3a5a7b, #2a4a6a); transform: translateY(-1px); }
+  .btn-answer.revealed { background: rgba(45,106,45,0.3); color: #6fcf6f; border-color: #4a8a4a; }
 
-  .btn:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
+  .divider { width: 100%; max-width: 480px; height: 1px; background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent); margin: 24px 0; }
 
-  .btn-start {
-    background: linear-gradient(135deg, var(--deep-red), #b02020);
-    color: var(--light-gold);
-    border: 1px solid var(--gold);
-  }
+  .danger-zone { width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 10px; }
 
-  .btn-start:hover:not(:disabled) {
-    background: linear-gradient(135deg, #a02020, #d03030);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(139,26,26,0.5);
-  }
+  .btn-end { background: rgba(80,30,30,0.5); color: rgba(255,100,100,0.8); border: 1px solid rgba(255,100,100,0.3); padding: 14px; border-radius: 10px; font-family: 'Noto Serif SC', serif; font-size: 0.9rem; letter-spacing: 2px; cursor: pointer; transition: all 0.2s ease; }
+  .btn-end:hover { background: rgba(139,26,26,0.5); color: #ff8080; }
 
-  .btn-answer {
-    background: linear-gradient(135deg, #2d4a6b, #1a3a5a);
-    color: #90b8e8;
-    border: 1px solid #4a7ab0;
-  }
+  .btn-reset { background: transparent; color: rgba(255,255,255,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 10px; font-family: 'Noto Serif SC', serif; font-size: 0.8rem; letter-spacing: 2px; cursor: pointer; transition: all 0.2s ease; }
+  .btn-reset:hover { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.5); }
 
-  .btn-answer:hover:not(:disabled) {
-    background: linear-gradient(135deg, #3a5a7b, #2a4a6a);
-    transform: translateY(-1px);
-  }
+  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px); background: rgba(40,40,40,0.95); border: 1px solid var(--gold); color: var(--light-gold); padding: 12px 24px; border-radius: 30px; font-size: 0.9rem; letter-spacing: 1px; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); pointer-events: none; z-index: 999; }
+  .toast.show { transform: translateX(-50%) translateY(0); }
 
-  .btn-answer.revealed {
-    background: rgba(45,106,45,0.3);
-    color: #6fcf6f;
-    border-color: #4a8a4a;
-  }
-
-  .divider {
-    width: 100%;
-    max-width: 480px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent);
-    margin: 24px 0;
-  }
-
-  .danger-zone {
-    width: 100%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn-end {
-    background: rgba(80,30,30,0.5);
-    color: rgba(255,100,100,0.8);
-    border: 1px solid rgba(255,100,100,0.3);
-    padding: 14px;
-    border-radius: 10px;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .btn-end:hover {
-    background: rgba(139,26,26,0.5);
-    color: #ff8080;
-  }
-
-  .btn-reset {
-    background: transparent;
-    color: rgba(255,255,255,0.3);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 12px;
-    border-radius: 10px;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .btn-reset:hover {
-    background: rgba(255,255,255,0.05);
-    color: rgba(255,255,255,0.5);
-  }
-
-  .toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: rgba(40,40,40,0.95);
-    border: 1px solid var(--gold);
-    color: var(--light-gold);
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    pointer-events: none;
-    z-index: 999;
-  }
-
-  .toast.show {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  .lock-screen {
-    position: fixed;
-    inset: 0;
-    background: rgba(10,0,0,0.97);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    gap: 20px;
-  }
-
+  .lock-screen { position: fixed; inset: 0; background: rgba(10,0,0,0.97); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 1000; gap: 20px; }
   .lock-icon { font-size: 3rem; }
-  .lock-title {
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 1.5rem;
-    color: var(--light-gold);
-    letter-spacing: 4px;
-  }
-  .lock-input {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--gold);
-    border-radius: 10px;
-    padding: 14px 20px;
-    color: var(--cream);
-    font-size: 1.2rem;
-    text-align: center;
-    letter-spacing: 6px;
-    width: 220px;
-    outline: none;
-    font-family: 'Noto Serif SC', serif;
-  }
-  .lock-btn {
-    background: linear-gradient(135deg, var(--deep-red), #b02020);
-    color: var(--light-gold);
-    border: 1px solid var(--gold);
-    padding: 12px 40px;
-    border-radius: 10px;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 1rem;
-    letter-spacing: 3px;
-    cursor: pointer;
-  }
-  .lock-error {
-    color: #ff8080;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    min-height: 20px;
-  }
+  .lock-title { font-family: 'Ma Shan Zheng', cursive; font-size: 1.5rem; color: var(--light-gold); letter-spacing: 4px; }
+  .lock-input { background: rgba(255,255,255,0.05); border: 1px solid var(--gold); border-radius: 10px; padding: 14px 20px; color: var(--cream); font-size: 1.2rem; text-align: center; letter-spacing: 6px; width: 220px; outline: none; font-family: 'Noto Serif SC', serif; }
+  .lock-btn { background: linear-gradient(135deg, var(--deep-red), #b02020); color: var(--light-gold); border: 1px solid var(--gold); padding: 12px 40px; border-radius: 10px; font-family: 'Noto Serif SC', serif; font-size: 1rem; letter-spacing: 3px; cursor: pointer; }
+  .lock-error { color: #ff8080; font-size: 0.85rem; letter-spacing: 1px; min-height: 20px; }
 </style>
 </head>
 <body>
 
-<!-- Password lock -->
 <div class="lock-screen" id="lock-screen">
   <div class="lock-icon">🔐</div>
   <div class="lock-title">主持人专用</div>
@@ -343,8 +118,7 @@
   <div class="lock-error" id="lock-error"></div>
 </div>
 
-<!-- Main content -->
-<div id="main-content" style="display:none; width:100%; display:none; flex-direction:column; align-items:center;">
+<div id="main-content" style="display:none; width:100%; flex-direction:column; align-items:center;">
   <div class="page-title">🎙️ 主持人控制台</div>
   <div class="page-sub">— 仅供主持人使用 —</div>
 
@@ -356,9 +130,7 @@
     <div style="font-size:2rem;" id="status-icon">⏳</div>
   </div>
 
-  <div class="rounds-container" id="rounds-container">
-    <!-- filled by JS -->
-  </div>
+  <div class="rounds-container" id="rounds-container"></div>
 
   <div class="divider"></div>
 
@@ -370,46 +142,26 @@
 
 <div class="toast" id="toast"></div>
 
+<!-- 题目数据 -->
+<script src="rounds.js"></script>
+
 <!-- Firebase -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-  // ⬇⬇⬇ 替换成你的 Firebase 配置（与宾客页面相同）⬇⬇⬇
   const firebaseConfig = {
-  apiKey: "AIzaSyBng-CfS_VXo1gBSUJcby3ZCnZjwTu8mtc",
-  authDomain: "wedding-emoji-game.firebaseapp.com",
-  projectId: "wedding-emoji-game",
-  storageBucket: "wedding-emoji-game.firebasestorage.app",
-  messagingSenderId: "1035601415042",
-  appId: "1:1035601415042:web:5ec4af80ca6cf3a588dd9b"
-};
-  // ⬆⬆⬆ 替换成你的 Firebase 配置 ⬆⬆⬆
+    apiKey: "AIzaSyC9Zk7-UUL-209FgLQKwT4DtTFfJNxfruM",
+    authDomain: "wedding-emoji-game.firebaseapp.com",
+    databaseURL: "https://wedding-emoji-game-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "wedding-emoji-game",
+    storageBucket: "wedding-emoji-game.firebasestorage.app",
+    messagingSenderId: "1035601415042",
+    appId: "1:1035601415042:web:5ec4af80ca6cf3a588dd9b"
+  };
 
-  const HOST_PASSWORD = "2026"; // 🔑 修改这里设置主持人密码
-
-  const ROUNDS = [
-    {
-      label: "第一轮",
-      emojis: ["🐟", "🌊", "🐠", "✈️", "🦅", "☁️", "🏔️", "🌤️"],
-      answer: "如鱼得水 · 一飞冲天"
-    },
-    {
-      label: "第二轮",
-      emojis: ["🌙", "🌑", "☀️", "🌕", "💪", "🏔️", "⛰️", "🙏"],
-      answer: "日新月异 · 移山填海"
-    },
-    {
-      label: "第三轮",
-      emojis: ["🌸", "🌷", "🍂", "❄️", "🤝", "💍", "❤️", "👰"],
-      answer: "花好月圆 · 白头偕老"
-    },
-    {
-      label: "第四轮",
-      emojis: ["🦁", "🐯", "🐉", "🦊", "🐚", "🦋", "🌈", "⭐"],
-      answer: "龙腾虎跃 · 化蝶成仙"
-    }
-  ];
+  // 🔑 修改这里设置主持人密码
+  const HOST_PASSWORD = "2026";
 
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
@@ -417,12 +169,12 @@
 
   let gameState = { round: -1, showAnswer: false, finished: false };
 
-  // Password check
   window.checkPwd = function() {
     const val = document.getElementById('pwd-input').value;
     if (val === HOST_PASSWORD) {
       document.getElementById('lock-screen').style.display = 'none';
-      document.getElementById('main-content').style.display = 'flex';
+      const main = document.getElementById('main-content');
+      main.style.display = 'flex';
       renderRounds();
     } else {
       document.getElementById('lock-error').textContent = '密码错误，请重试';
@@ -433,17 +185,10 @@
   function renderRounds() {
     const container = document.getElementById('rounds-container');
     container.innerHTML = '';
-    ROUNDS.forEach((round, i) => {
-      const card = document.createElement('div');
-      card.className = 'round-card';
-      card.id = `round-card-${i}`;
 
+    ROUNDS.forEach((round, i) => {
       const isDone = gameState.round > i || gameState.finished;
       const isActive = gameState.round === i && !gameState.finished;
-      const isWaiting = gameState.round < i && !gameState.finished;
-
-      if (isActive) card.classList.add('active');
-      if (isDone) card.classList.add('done');
 
       const badge = isActive ? `<span class="round-status-badge badge-active">进行中</span>`
                   : isDone   ? `<span class="round-status-badge badge-done">✓ 已完成</span>`
@@ -451,18 +196,18 @@
 
       const emojiHtml = round.emojis.map(e => `<div class="emoji-chip">${e}</div>`).join('');
 
-      const btnStart = i === 0 && gameState.round < 0
-        ? `<button class="btn btn-start" onclick="startRound(${i})">▶ 开始第一轮</button>`
-        : gameState.round === i - 1 && !gameState.finished
-        ? `<button class="btn btn-start" onclick="startRound(${i})">▶ 进入第${['一','二','三','四'][i]}轮</button>`
+      const canStart = (i === 0 && gameState.round < 0) || (gameState.round === i - 1 && !gameState.finished);
+      const btnStart = canStart
+        ? `<button class="btn btn-start" onclick="startRound(${i})">▶ 开始${round.label}</button>`
         : `<button class="btn btn-start" disabled>▶ 开始</button>`;
 
       const answerRevealed = isActive && gameState.showAnswer;
       const btnAnswer = isActive
-        ? `<button class="btn btn-answer ${answerRevealed ? 'revealed' : ''}" id="btn-answer-${i}"
-             onclick="toggleAnswer(${i})">${answerRevealed ? '✓ 已揭晓' : '💡 揭晓答案'}</button>`
+        ? `<button class="btn btn-answer ${answerRevealed ? 'revealed' : ''}" onclick="toggleAnswer(${i})">${answerRevealed ? '✓ 已揭晓' : '💡 揭晓答案'}</button>`
         : `<button class="btn btn-answer" disabled>💡 揭晓答案</button>`;
 
+      const card = document.createElement('div');
+      card.className = `round-card${isActive ? ' active' : ''}${isDone ? ' done' : ''}`;
       card.innerHTML = `
         <div class="round-card-header">
           <div class="round-title">${round.label}</div>
@@ -470,27 +215,16 @@
         </div>
         <div class="emoji-preview">${emojiHtml}</div>
         <div class="answer-preview">答案：<span>${round.answer}</span></div>
-        <div class="btn-group">
-          ${btnStart}
-          ${btnAnswer}
-        </div>
+        <div class="btn-group">${btnStart}${btnAnswer}</div>
       `;
       container.appendChild(card);
     });
 
-    // Update status bar
     const statusEl = document.getElementById('current-status');
     const iconEl = document.getElementById('status-icon');
-    if (gameState.finished) {
-      statusEl.textContent = '游戏结束';
-      iconEl.textContent = '🏁';
-    } else if (gameState.round < 0) {
-      statusEl.textContent = '等待开始';
-      iconEl.textContent = '⏳';
-    } else {
-      statusEl.textContent = `${ROUNDS[gameState.round].label} 进行中`;
-      iconEl.textContent = '🎮';
-    }
+    if (gameState.finished) { statusEl.textContent = '游戏结束'; iconEl.textContent = '🏁'; }
+    else if (gameState.round < 0) { statusEl.textContent = '等待开始'; iconEl.textContent = '⏳'; }
+    else { statusEl.textContent = `${ROUNDS[gameState.round].label} 进行中`; iconEl.textContent = '🎮'; }
   }
 
   window.startRound = async function(i) {
@@ -526,9 +260,8 @@
   }
 
   onValue(gameRef, (snapshot) => {
-    const state = snapshot.val();
-    gameState = state || { round: -1, showAnswer: false, finished: false };
-    const mainVisible = document.getElementById('main-content').style.display !== 'none';
+    gameState = snapshot.val() || { round: -1, showAnswer: false, finished: false };
+    const mainVisible = document.getElementById('main-content').style.display === 'flex';
     if (mainVisible) renderRounds();
   });
 </script>
