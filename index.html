@@ -125,7 +125,7 @@
 
   .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4caf50; margin-right: 6px; animation: blink 2s ease-in-out infinite; vertical-align: middle; }
   @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-  .status-bar { position: fixed; bottom: 16px; right: 16px; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.7); font-size: 0.72rem; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; }
+  .status-bar { position: fixed; bottom: 16px; right: 16px; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.7); font-size: 0.72rem; padding: 8px; border-radius: 50%; letter-spacing: 1px; }
 </style>
 </head>
 <body>
@@ -137,6 +137,8 @@
 
 <div class="main-card">
   <span class="header-icon">💑</span>
+  <div style="font-family:'Ma Shan Zheng',cursive; color:#8b1a1a; font-size:1.1rem; letter-spacing:3px; margin-bottom:2px;">Terry & Rebecca</div>
+  <div style="font-size:0.75rem; color:#a07840; letter-spacing:2px; margin-bottom:4px;">Wedding Game · March 15, 2026</div>
   <div class="game-title">猜成语游戏</div>
   <div class="subtitle">— 婚礼互动小游戏 —</div>
 
@@ -166,7 +168,7 @@
   </div>
 </div>
 
-<div class="status-bar"><span class="status-dot"></span>实时同步中</div>
+<div class="status-bar"><span class="status-dot"></span></div>
 
 <!-- 题目数据 -->
 <script src="rounds.js"></script>
