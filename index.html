@@ -125,11 +125,18 @@
 
   .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4caf50; margin-right: 6px; animation: blink 2s ease-in-out infinite; vertical-align: middle; }
   @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-  .status-bar { position: fixed; bottom: 16px; right: 16px; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.7); font-size: 0.72rem; padding: 8px; border-radius: 50%; letter-spacing: 1px; }
+  .status-bar { position: fixed; bottom: 16px; right: 16px; background: rgba(0,0,0,0.5); color: rgba(255,255,255,0.7); font-size: 0.72rem; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; }
 </style>
 </head>
 <body>
-
+<div style="position:fixed; top:0; left:0; right:0; text-align:center; padding:10px 20px; z-index:100; pointer-events:none;">
+  <div style="font-family:'Georgia','Garamond',serif; color:rgba(255,255,255,0.9); font-size:1.1rem; letter-spacing:4px; text-shadow:0 1px 6px rgba(0,0,0,0.5);">
+    Terry &amp; Rebecca
+  </div>
+  <div style="font-size:0.7rem; color:rgba(240,208,128,0.8); letter-spacing:3px; margin-top:2px;">
+    Wedding Game · March 15, 2026
+  </div>
+</div>
 <div class="corner-decor tl">🌸</div>
 <div class="corner-decor tr">🌸</div>
 <div class="corner-decor bl">🌺</div>
@@ -137,8 +144,6 @@
 
 <div class="main-card">
   <span class="header-icon">💑</span>
-  <div style="font-family:'Ma Shan Zheng',cursive; color:#8b1a1a; font-size:1.1rem; letter-spacing:3px; margin-bottom:2px;">Terry & Rebecca</div>
-  <div style="font-size:0.75rem; color:#a07840; letter-spacing:2px; margin-bottom:4px;">Wedding Game · March 15, 2026</div>
   <div class="game-title">猜成语游戏</div>
   <div class="subtitle">— 婚礼互动小游戏 —</div>
 
@@ -151,7 +156,7 @@
   <div id="game-screen" style="display:none;">
     <div class="round-badge" id="round-label">第一轮</div>
     <div class="emoji-grid" id="emoji-grid"></div>
-    <p class="hint-text">💡 8个emoji对应两个四字成语，先猜出来有奖！</p>
+    <p class="hint-text">💡 8个emoji对应两个四字成语，emoji顺序为随机排列，先猜出来有神秘礼品！</p>
     <div class="divider"></div>
     <div class="instruction"><strong>🏆 规则</strong><br>猜出两个成语后<br>举手告诉主持人答案</div>
     <div class="answer-section" id="answer-section">
